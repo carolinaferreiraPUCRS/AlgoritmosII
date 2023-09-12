@@ -7,9 +7,6 @@ public class Controller {
 
     public Controller() {
         in = new Scanner(System.in);
-        // ar = new ArchiveReader("ct_10.txt");
-        // ar.read();
-        // lista = ar.getLista();
     }
 
     public void execute() {
@@ -32,56 +29,56 @@ public class Controller {
             in.nextLine();
             switch (option) {
                 case 1:
-                    ar = new ArchiveReader("ct_10.txt");
+                    ar = new ArchiveReader("T1_ALESTII\\ct_10.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
                     System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
                     break;
                 case 2:
-                    ar = new ArchiveReader("ct_100.txt");
+                    ar = new ArchiveReader("T1_ALESTII\\ct_100.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
                     System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
                     break;
                 case 3:
-                    ar = new ArchiveReader("ct_1000.txt");
+                    ar = new ArchiveReader("T1_ALESTII\\ct_1000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
                     System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
                     break;
                 case 4:
-                    ar = new ArchiveReader("ct_10000.txt");
+                    ar = new ArchiveReader("T1_ALESTII\\ct_10000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
                     System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
                     break;
                 case 5:
-                    ar = new ArchiveReader("ct_10004.txt");
+                    ar = new ArchiveReader("T1_ALESTII\\ct_10004.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
                     System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
                     break;
                 case 6:
-                    ar = new ArchiveReader("ct_100000.txt");
+                    ar = new ArchiveReader("T1_ALESTII\\ct_100000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
                     System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
                     break;
                 case 7:
-                    ar = new ArchiveReader("ct_1000000.txt");
+                    ar = new ArchiveReader("T1_ALESTII\\ct_1000000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
                     System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
                     break;
                 case 8:
-                    ar = new ArchiveReader("ct_2000000.txt");
+                    ar = new ArchiveReader("T1_ALESTII\\ct_2000000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();

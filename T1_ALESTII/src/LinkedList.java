@@ -2,7 +2,6 @@ public class LinkedList {
 
     private Node head;
     private Node tail;
-    private Node current;
     private int count;
 
     private class Node {
