@@ -7,11 +7,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ArchiveReader {
-    private LinkedList lista;
+    private Lista lista;
     private String path;
 
     public ArchiveReader(String path) {
-        lista = new LinkedList();
+        lista = new Lista();
         this.path = path;
     }
 
@@ -35,7 +35,7 @@ public class ArchiveReader {
         }
     }
 
-    public LinkedList getLista() {
+    public Lista getLista() {
         return lista;
     }
 }

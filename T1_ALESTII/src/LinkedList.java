@@ -32,62 +32,103 @@ public class LinkedList {
 
     }
 
+    // public void deteriorar() {
+    // if (count <= 2643) {
+    // char a = 'c';
+    // }
+    // if (head == null || head.next == null) {
+    // return;
+    // } else {
+
+    // Node aux = head;
+    // Node aux2 = head.next;
+    // Node prev = null;
+
+    // while (podeDeteriorar()) {
+    // if (aux.element != aux2.element) {
+    // char c = compare(aux, aux2);
+    // Node n = new Node(c);
+
+    // if (prev == null) {
+    // if (aux2.next == null) {
+    // aux2.next = n;
+    // }
+
+    // } else {
+    // prev.next = aux2.next;
+    // }
+    // count--;
+
+    // tail.next = n;
+    // tail = n;
+
+    // if (aux == head) {
+    // head = aux2.next;
+    // } else {
+    // prev.next = aux2.next;
+    // aux = aux2.next;
+    // }
+
+    // deteriorar();
+    // } else {
+    // aux = aux.next;
+    // aux2 = aux2.next;
+    // if (prev == null) {
+    // prev = head;
+    // } else {
+    // prev = prev.next;
+    // }
+    // }
+    // }
+    // return;
+    // }
+    // }
+
     public void deteriorar() {
         if (head == null || head.next == null) {
             return;
         }
 
-        Node aux = head;
-        Node aux2 = head.next;
-        Node prev = null;
+        while (podeDeteriorar()) {
+            Node aux = head;
+            Node aux2 = head.next;
+            Node prev = null;
+            retiraDaLista(aux, aux2, prev);
+        }
+        return;
+    }
 
-        while (aux2 != null) {
-            if (aux.element != aux2.element) {
-                char c = compare(aux, aux2);
-                Node n = new Node(c);
+    private void retiraDaLista(Node aux, Node aux2, Node prev) {
+        if (aux.element != aux2.element) {
+            char c = compare(aux, aux2);
+            Node n = new Node(c);
 
-                if (prev == null) {
-                    if (aux2.next == null) {
-                        aux2.next = n;
-                    }
-                    head = aux2.next;
-                } else {
-                    prev.next = aux2.next;
-                }
-                count--;
-
-                if (aux2.next == null) {
-                    aux2.next = n;
-                    prev.next = aux2.next;
-                }
-                tail.next = n;
-                tail = n;
-         
-                if (aux == head) {
-                    aux = head;
-                    aux2 = head.next;
-                } else {
-                    aux = aux2.next;
-                    if (aux.next != null) {
-                        aux2 = aux.next;
-                    } else {
-                        aux2 = null;
-                    }
-                }
-            } else {
-                aux = aux.next;
-                aux2 = aux2.next;
-                if (prev == null) {
-                    prev = head;
-                } else {
-                    prev = prev.next;
-                }
+            if (aux2.next == null) {
+                aux2.next = n;
             }
+            count--;
+
+            tail.next = n;
+            tail = n;
+
+            if (aux == head) {
+                head = aux2.next;
+            } else {
+                prev.next = aux2.next;
+                aux = aux2.next;
+            }
+            return;
+        } else {
+            aux = aux.next;
+            aux2 = aux2.next;
+            if (prev == null) {
+                prev = head;
+            } else {
+                prev = prev.next;
+            }
+            retiraDaLista(aux, aux2, prev);
         }
-        if (podeDeteriorar()) {
-            deteriorar();
-        }
-        
+
     }
 
     private boolean podeDeteriorar() {
@@ -121,22 +162,6 @@ public class LinkedList {
         return count;
     }
 
-    public char getValue(int index) { // Método que retorna o valor da iésima posição
-        if (index < 0 || index >= count) {
-            throw new IndexOutOfBoundsException();
-        }
-
-        if (index == count - 1) {
-            return tail.element;
-        }
-        Node aux = head;
-        int c = 0;
-        while (c < index) {
-            aux = aux.next;
-            c++;
-        }
-        return aux.element;
-    }
 
     @Override
     public String toString() {
