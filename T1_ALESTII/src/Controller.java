@@ -33,56 +33,56 @@ public class Controller {
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
-                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
+                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n" + "Tamanho da cadeia: " + lista.size() + "\n");
                     break;
                 case 2:
                     ar = new ArchiveReader("ct_100.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
-                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
+                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n" + "Tamanho da cadeia: " + lista.size() + "\n");
                     break;
                 case 3:
                     ar = new ArchiveReader("ct_1000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
-                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
+                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n" + "Tamanho da cadeia: " + lista.size() + "\n");
                     break;
                 case 4:
                     ar = new ArchiveReader("ct_10000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
-                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
+                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n" + "Tamanho da cadeia: " + lista.size() + "\n");
                     break;
                 case 5:
                     ar = new ArchiveReader("ct_10004.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
-                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
+                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n" + "Tamanho da cadeia: " + lista.size() + "\n");
                     break;
                 case 6:
                     ar = new ArchiveReader("ct_100000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
-                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
+                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n" + "Tamanho da cadeia: " + lista.size() + "\n");
                     break;
                 case 7:
                     ar = new ArchiveReader("ct_1000000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
-                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
+                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n" + "Tamanho da cadeia: " + lista.size() + "\n");
                     break;
                 case 8:
                     ar = new ArchiveReader("ct_2000000.txt");
                     ar.read();
                     lista = ar.getLista();
                     lista.deteriorar();
-                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n");
+                    System.out.println("\n" + "Cadeia deteriorada: " + lista + "\n" + "Tamanho da cadeia: " + lista.size() + "\n");
                     break;
                 case 0:
                     System.out.println("Saindo...");

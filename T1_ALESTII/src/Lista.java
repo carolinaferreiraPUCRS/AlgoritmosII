@@ -1,9 +1,7 @@
-import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Lista {
     private LinkedList<Character> lista;
-    private HashMap<Character, Character> map;
     
     public Lista() {
         lista = new LinkedList<Character>();
@@ -13,13 +11,17 @@ public class Lista {
         lista.add(element);
     }
 
+    public int size() {
+        return lista.size();
+    }
+
     public void deteriorar() {
         if (lista.size() <= 0) {
             return;
         }
         int indice = 0;
 
-        while(podeDeteriorar() && indice < lista.size() - 1) {
+        while(indice < lista.size() - 1) {
             if (lista.get(indice) != lista.get(indice + 1)) {
                 char c = compare(lista.get(indice), lista.get(indice + 1));
                 lista.remove(indice);
@@ -30,19 +32,6 @@ public class Lista {
                 indice++;
             }
         }
-     }
-
-     public boolean podeDeteriorar() {
-        boolean ok = false;
-
-        for (int i = 0; i < lista.size() - 1; i++) {
-
-            if (lista.get(i) != lista.get(i + 1)) {
-                ok = true;
-                return ok;
-            }
-        }
-        return ok;
      }
 
      public char compare(char a, char b) {
