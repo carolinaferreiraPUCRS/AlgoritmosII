@@ -2,7 +2,8 @@ public class ArestaValorada {
     private String v;
     private String w;
     private int peso;
-    public ArestaValorada(String v, String w, int peso) {
+
+    ArestaValorada(String v, String w, int peso) {
         this.v = v;
         this.w = w;
         this.peso = peso;
